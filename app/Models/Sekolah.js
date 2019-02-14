@@ -21,6 +21,7 @@ class Sekolah extends Model {
         return 'id'
     }
 
+    //create relations table sekolah to kepsek
     kepala_sekolah(){
         return this.belongsTo('App/Models/Kepsek', 'id', 'id')
     }

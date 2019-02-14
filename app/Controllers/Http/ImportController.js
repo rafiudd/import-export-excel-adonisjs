@@ -13,6 +13,7 @@ class ImportController {
         let fname   = `${new Date().getTime()}.${upload.extname}`
         let dir     = 'upload/'
 
+        //move uploaded file into custom folder
         await upload.move(Helpers.tmpPath(dir), {
             name: fname
         })
@@ -22,16 +23,13 @@ class ImportController {
             return (upload.error(), 'Error moving files', 500)
         }
 
-        //console.log(['hhh'],upload)
         let send = await ImportService.ImportClassification('tmp/' + dir + fname)
         console.log(send)
-        let aa  = 'suses'
-        return ({}, aa,200)
     }
 
     async getData(){
+        // api get all data import
         let get = await Sekolah.all()
-
         return (get)
     }
 }
