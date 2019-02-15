@@ -20,4 +20,5 @@ Route.on('/').render('welcome')
 
 Route.post('import','ImportController.import')
 Route.get('/getData','ImportController.getData')
+Route.get('/export','ExportController.export')
 

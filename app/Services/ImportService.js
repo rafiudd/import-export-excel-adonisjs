@@ -42,14 +42,7 @@ class ImportService{
                     let resNama    = await Kepsek.create(inputNama)
                     console.log('sekolah',resSekolah.toJSON())
                 }
-
-                
-                
-
-
-                    
-                      
-            })
+        })
     }            
 }
 

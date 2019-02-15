@@ -5,12 +5,12 @@ const Model = use('Model')
 
 class Sekolah extends Model {
 
-   static boot() {
-        super.boot()
-        this.addGlobalScope(builder => {
-            builder.with('kepala_sekolah')
-        })
-    }
+    static boot() {
+         super.boot()
+         this.addGlobalScope(builder => {
+             builder.with('kepala_sekolah')
+         })
+     }
 
 
     static get_table(){
@@ -24,7 +24,7 @@ class Sekolah extends Model {
     //create relations table sekolah to kepsek
     kepala_sekolah(){
         return this.belongsTo('App/Models/Kepsek', 'id', 'id')
-    }
+     }
 }
 
 module.exports = Sekolah
